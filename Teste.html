@@ -1,0 +1,70 @@
+<header>
+  <h2>Parte 1</h2>
+
+  <hr />
+</header>
+
+<body>
+  <div class="firstQuestion">
+    <h3>
+      (A) Leitura de imagem em arquivo: O programa “L1_1_img.py” realiza a
+      leitura e de imagem gravado num arquivo e mostra a imagem numa janela do
+      linux. Além disso, o programa permite salvar a imagem em arquivo. Execute
+      e verifique o resultado:
+    </h3>
+    <br />
+    <h3>Responda: Por que a Janela aberta não mostra a imagem colorida?</h3>
+    <p>
+      No código, a imagem está sendo lida em escala de cinza devido ao parâmetro
+      ‘0’ passado para a função ‘cv.imread()’:
+    </p>
+
+    <code
+      style="background-color: rgb(246, 246, 246); padding: 20px; margin: 10px"
+    >
+      img cv.imread('messi5.jpg', 0)</code
+    >
+
+    <p>
+      Quando você carrega uma imagem usando cv.imread('messi5.jpg', 0), o
+      parâmetro 0 indica que a imagem deve ser lida em escala de cinza
+      (grayscale). Isso significa que img é uma matriz NumPy contendo valores de
+      intensidade de pixel em escala de cinza, não os valores RGB que compõem
+      uma imagem colorida. Ao exibir a imagem usando cv.imshow('image', img), o
+      OpenCV interpreta os valores da matriz img como uma imagem em escala de
+      cinza e, portanto, a janela exibida pelo cv.imshow() mostrará a imagem em
+      tons de cinza.
+    </p>
+    <hr />
+  </div>
+
+  <div class="secondQuestion">
+    <h3>
+      (B) Leitura de vídeo em arquivo: O programa “L1_2_video.py” realiza a
+      leitura de video gravado num arquivo e exibe a sequencia das imagems numa
+      janela do linux. Execute e verifique o resultado:
+    </h3>
+    <br />
+
+    <h3>
+      Modifique o programa para que as imagens sejam exibidas mais rápidamente e
+      depois para que sejam exibidas mais lentamente. Responda: qual a
+      explicação de alteração de velocidade de exibição, e apresente suas
+      soluções detalhadamente.
+    </h3>
+    <br />
+    <h3>Responda: Por que a Janela aberta não mostra a imagem colorida?</h3>
+    <p>
+      No código, a imagem está sendo lida em escala de cinza devido ao parâmetro
+      ‘0’ passado para a função ‘cv.imread()’:
+    </p>
+
+    <pre>
+        <code style="background-color:rgb(246,246,246);
+                     padding: 20px;
+                     margin: 10px;"> #wait next frame by 40ms - 25fps    
+                                      time.sleep(1/25.0)   </code>
+
+</pre>
+  </div>
+</body>
